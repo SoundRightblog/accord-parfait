@@ -5,259 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundRight - Actualité & Analyse de l'Industrie Musicale</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: #ffffff;
-        }
-
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e8e8e8;
-            padding: 2rem 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 300;
-            color: #2c3e50;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            font-weight: 600;
-        }
-
-        .tagline {
-            font-size: 0.95rem;
-            color: #7f8c8d;
-            margin-top: 0.3rem;
-            font-weight: 300;
-        }
-
-        nav {
-            background: #ffffff;
-            border-bottom: 1px solid #e8e8e8;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 0;
-        }
-
-        nav li {
-            margin: 0;
-        }
-
-        nav a {
-            display: block;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 400;
-            font-size: 0.95rem;
-            padding: 1.2rem 1.8rem;
-            transition: all 0.2s ease;
-            border-bottom: 2px solid transparent;
-        }
-
-        nav a:hover {
-            color: #3498db;
-            border-bottom-color: #3498db;
-        }
-
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #7f8c8d;
-            max-width: 700px;
-            margin: 0 auto;
-            font-weight: 300;
-            line-height: 1.7;
-        }
-
-        .accent-line {
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, #3498db, #f1c40f, #e74c3c, #2ecc71);
-            margin: 2rem auto;
-        }
-
-        .features {
-            padding: 4rem 0;
-            background: #fafafa;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .feature {
-            text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .feature h3 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #2c3e50;
-            margin-bottom: 0.8rem;
-        }
-
-        .feature p {
-            font-size: 0.95rem;
-            color: #7f8c8d;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .cta-section {
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 0.8rem;
-            max-width: 500px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            min-width: 280px;
-            padding: 0.9rem 1.2rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }
-
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: #3498db;
-        }
-
-        .newsletter-form button {
-            padding: 0.9rem 2rem;
-            background: #2c3e50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-weight: 400;
-            cursor: pointer;
-            transition: background 0.2s;
-            font-size: 0.95rem;
-        }
-
-        .newsletter-form button:hover {
-            background: #34495e;
-        }
-
-        .color-dots {
-            display: flex;
-            gap: 0.6rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-        }
-
-        .dot.blue { background: #3498db; }
-        .dot.yellow { background: #f1c40f; }
-        .dot.red { background: #e74c3c; }
-        .dot.green { background: #2ecc71; }
-
-        footer {
-            background: #fafafa;
-            border-top: 1px solid #e8e8e8;
-            text-align: center;
-            padding: 2.5rem 0;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            color: #95a5a6;
-            font-size: 0.9rem;
-            font-weight: 300;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            nav a {
-                text-align: center;
-                padding: 1rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-        }
+        /* ... même style CSS que tu avais ... */
     </style>
 </head>
 <body>
@@ -270,12 +18,12 @@
 
     <nav>
         <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#actualite">Actualité</a></li>
-            <li><a href="#juridique">Juridique</a></li>
-            <li><a href="#economie">Économie</a></li>
-            <li><a href="#interviews">Interviews</a></li>
-            <li><a href="#etudes">Études & Rapports</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="actualite.html">Actualité</a></li>
+            <li><a href="juridique.html">Juridique</a></li>
+            <li><a href="economie.html">Économie</a></li>
+            <li><a href="interviews.html">Interviews</a></li>
+            <li><a href="etudes.html">Études & Rapports</a></li>
         </ul>
     </nav>
 
@@ -287,64 +35,7 @@
         </section>
     </div>
 
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">📰</div>
-                    <h3>Actualité</h3>
-                    <p>Les dernières nouvelles de l'industrie musicale, analysées et contextualisées pour vous.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">⚖️</div>
-                    <h3>Juridique</h3>
-                    <p>Décryptage des évolutions législatives et des enjeux du droit de la musique.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">💼</div>
-                    <h3>Économie</h3>
-                    <p>Analyse des modèles économiques et des transformations du marché musical.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">🎤</div>
-                    <h3>Interviews</h3>
-                    <p>Rencontres avec les professionnels qui font l'industrie musicale d'aujourd'hui.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">📊</div>
-                    <h3>Études & Rapports</h3>
-                    <p>Synthèses des études sectorielles et rapports professionnels essentiels.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">📬</div>
-                    <h3>Digest Quotidien</h3>
-                    <p>Un résumé automatisé des actualités importantes, directement dans votre boîte mail.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <h2>Restez informé chaque jour</h2>
-            <p style="color: #7f8c8d; margin-bottom: 2rem; font-weight: 300;">Recevez votre digest quotidien personnalisé</p>
-            <form class="newsletter-form" id="newsletter-form">
-                <input type="email" placeholder="Votre adresse email" required>
-                <button type="submit">S'abonner</button>
-            </form>
-            <div class="color-dots">
-                <span class="dot blue"></span>
-                <span class="dot yellow"></span>
-                <span class="dot red"></span>
-                <span class="dot green"></span>
-            </div>
-        </div>
-    </section>
+    <!-- autres sections... -->
 
     <footer>
         <div class="container">
@@ -354,7 +45,7 @@
     </footer>
 
     <script>
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        document.getElementById('newsletter-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('input').value;
             alert('Merci pour votre inscription !\n\nVous recevrez bientôt votre digest quotidien à : ' + email);
