@@ -41,43 +41,27 @@
       </div>
 
       <!-- LISTE DES ARTICLES -->
-      <section style="margin-top: 2rem; text-align: left;">
-
+      <section class="article-list">
         <h3>Articles récents</h3>
 
-        <ul style="list-style:none; padding-left:0; margin-top:1.2rem;">
+        <ul class="article-grid">
 
-          <!-- ARTICLE 1 AVEC MINIATURE -->
-          <li style="margin-bottom:1.5rem; display:flex; align-items:center; gap:15px;">
+          <!-- ARTICLE 1 -->
+          <li class="article-card">
+            <a href="article-1.html" style="text-decoration:none; color:inherit;">
+              <img src="images/cash.jpg" alt="Johnny Cash">
 
-            <!-- MINIATURE -->
-            <img src="images/cash.jpg"
-                 alt="Johnny Cash"
-                 style="width:75px; height:75px; object-fit:cover; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+              <div class="article-card-body">
+                <h4 class="article-card-title">
+                  Quand la voix devient un actif juridique : l’affaire Johnny Cash contre Coca-Cola
+                </h4>
 
-            <!-- TEXTE -->
-            <div>
-              <a href="article-1.html"
-                 style="font-weight:600; color:var(--accent-3); text-decoration:none; font-size:1rem;">
-                 Quand la voix devient un actif juridique : l’affaire Johnny Cash contre Coca-Cola
-              </a>
-
-              <div style="margin-top:4px;">
-                <span style="
-                  background:var(--accent-3);
-                  color:white;
-                  padding:3px 8px;
-                  border-radius:12px;
-                  font-size:0.7rem;
-                ">
-                  Juridique
-                </span>
+                <div class="article-card-meta">Juridique</div>
               </div>
-            </div>
+            </a>
           </li>
 
         </ul>
-
       </section>
 
       <!-- FOOTER -->
