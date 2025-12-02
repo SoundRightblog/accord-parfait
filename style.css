@@ -27,7 +27,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--text-main);
 
-  /* 🎨 Fond bleu très doux et élégant */
   background: radial-gradient(circle at top left, #e8f1ff, #dbeafe, #f5faff);
   min-height: 100vh;
 }
@@ -140,12 +139,53 @@ nav a:hover {
 }
 
 /* ---------------------------------------------------
-   SECTIONS PRINCIPALES
+   HERO VISUEL (ÉTAPE 1)
+--------------------------------------------------- */
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 2.2rem;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+
+.hero-visual h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.hero-visual p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------
+   SECTIONS PRINCIPALES (pages internes)
 --------------------------------------------------- */
 
 .hero {
-  padding-top: 0.5rem;
   text-align: center;
+  padding-top: 0.5rem;
 }
 
 .hero h2 {
@@ -216,7 +256,6 @@ nav a:hover {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  display: block;
 }
 
 .article-card-body {
@@ -265,6 +304,14 @@ footer {
 
   header h1 {
     font-size: 1.8rem;
+  }
+
+  .hero-visual {
+    height: 220px;
+  }
+
+  .hero-visual h2 {
+    font-size: 1.4rem;
   }
 
   .hero h2 {
