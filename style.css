@@ -90,10 +90,8 @@ header p {
   margin: 1.2rem auto 0;
   border-radius: 999px;
   background: linear-gradient(90deg,
-    var(--accent-1),
-    var(--accent-2),
-    var(--accent-3),
-    var(--accent-4)
+    var(--accent-1), var(--accent-2),
+    var(--accent-3), var(--accent-4)
   );
 }
 
@@ -122,11 +120,9 @@ nav a {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-
   color: #374151;
   background: var(--bg-nav);
   border: 1px solid var(--border-light);
-
   transition: all 0.18s ease-in-out;
 }
 
@@ -139,44 +135,22 @@ nav a:hover {
 }
 
 /* ---------------------------------------------------
-   HERO VISUEL (ÉTAPE 1)
+   HERO IMAGE (VERSION CORRECTE)
 --------------------------------------------------- */
 
-.hero-visual {
-  position: relative;
+.hero-image {
   width: 100%;
-  height: 300px;
-  border-radius: 18px;
+  border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.5rem;
 }
 
-.hero-visual img {
+.hero-image img {
   width: 100%;
-  height: 100%;
+  height: 260px;
   object-fit: cover;
-  filter: brightness(65%);
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  max-width: 700px;
-  padding: 0 1rem;
-}
-
-.hero-visual h2 {
-  font-size: 2rem;
-  margin-bottom: 0.7rem;
-}
-
-.hero-visual p {
-  font-size: 1rem;
-  line-height: 1.6;
+  display: block;
+  border-radius: 12px;
 }
 
 /* ---------------------------------------------------
@@ -233,7 +207,6 @@ nav a:hover {
   list-style: none;
   padding: 0;
   margin: 1.2rem 0 0;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
@@ -306,12 +279,8 @@ footer {
     font-size: 1.8rem;
   }
 
-  .hero-visual {
-    height: 220px;
-  }
-
-  .hero-visual h2 {
-    font-size: 1.4rem;
+  .hero-image img {
+    height: 200px;
   }
 
   .hero h2 {
